@@ -3,7 +3,7 @@ MAINTAINER He Bai <bai.he@outlook.com>
 
 WORKDIR /opt
 
-VOLUME /disconf
+ADD disconf/ /disconf
 
 # Environment variables
 ENV TOMCAT_VERSION 8.0.33
