@@ -15,7 +15,7 @@ ENV WAR_ROOT_PATH /disconf/war
 RUN git clone ${DISCONF_REPO} && cd disconf/disconf-web && sh deploy/deploy.sh && cd -
 
 RUN wget http://mirrors.noc.im/apache/tomcat/tomcat-8/v8.0.33/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz && tar xvzf apache-tomcat-${TOMCAT_VERSION}.tar.gz
-ADD conf/server.xml /opt/apache-tomcat-${TOMCAT_VERSION}/conf/server.xml
+ADD disconf/conf/server.xml /opt/apache-tomcat-${TOMCAT_VERSION}/conf/server.xml
 
 CMD /opt/apache-tomcat-${TOMCAT_VERSION}/bin/catalina.sh run
 
