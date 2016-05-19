@@ -11,11 +11,9 @@ services:
   zookeeper:
     image: jplock/zookeeper
   disconf:
-    build: .
+    image: bailaohe/disconf
     ports:
-      - "8080"
-    volumes:
-      - ./disconf:/disconf
+      - "8080:8080"
     depends_on:
       - mysql
       - redis 
