@@ -18,3 +18,12 @@ services:
       - mysql
       - redis 
       - zookeeper
+  nginx:
+    image: nginx
+    ports:
+      - "9999:9999" 
+    volumes:
+      - ./disconf/conf/nginx.conf:/etc/nginx/nginx.conf
+      - ./html:/html
+    depends_on:
+      - disconf
